@@ -1,36 +1,36 @@
 using System;
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-public class TopDownStupidEnnemiSpawner : MonoBehaviour
+namespace Script
 {
-    [SerializeField] private Vector3[] _spawnPoints;
-    [SerializeField] private float _spawningRange = 2;
-    [SerializeField] private float _spawningDelay = 5;
-    [SerializeField] private GameObject _ptibout;
-
-
-    private float _spawningTimer;
-
-    private bool _canSpawn
+    public class Spawner : MonoBehaviour
     {
-        get => _spawningTimer > _spawningDelay;
-    }
-
-    void Update()
-    {
-        if (_canSpawn)
+        [SerializeField] private GameObject _ptibout;
+        [SerializeField] private List<Transform> _spawns;
+        [SerializeField] private float _spawnInterval;
+        private float _time;
+        
+        private void Update()
         {
-            Vector3 pos = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
-            pos += new Vector3(Random.Range(-_spawningRange, _spawningRange)
-                , 0, Random.Range(-_spawningRange, _spawningRange));
-            _ptibout = Instantiate(_ptibout, pos, Quaternion.identity);
-            _spawningTimer = 0;
+            _time += Time.deltaTime;
+            if (_time >= _spawnInterval)
+            {
+                SpawnIA();
+                _time = 0;
+            }
         }
-        else
+
+        private void SpawnIA()
         {
-            _spawningTimer += Time.deltaTime;
+            if (_spawns == null || _spawns.Count == 0) 
+            {
+                Debug.Log("Aucun spawn point assigné");
+                return;
+            }
+
+            Transform spawnPoint = _spawns[UnityEngine.Random.Range(0, _spawns.Count)];
+            Instantiate(_ptibout, spawnPoint.position, spawnPoint.rotation);
         }
     }
 }
