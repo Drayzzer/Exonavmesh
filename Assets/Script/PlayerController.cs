@@ -7,13 +7,15 @@ namespace Script
 {
     public class PlayerController : MonoBehaviour
     {
+        [Header("Settings")]
+        [SerializeField]private Animator _animator;
         [SerializeField] private float _moveSpeed;
         [SerializeField] private float _rotationSpeed;
         [SerializeField] private Vector2 _move;
         [SerializeField] private Vector2 _look;
        
+       
         private PlayerInput _pI;
-        private Animator _animator;
         private Rigidbody _rb;
 
         private void Awake()
