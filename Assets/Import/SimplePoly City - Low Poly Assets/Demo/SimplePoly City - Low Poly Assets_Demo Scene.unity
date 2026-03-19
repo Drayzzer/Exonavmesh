@@ -39653,7 +39653,7 @@ GameObject:
   - component: {fileID: 1554599265}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: target
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56673,6 +56673,26 @@ PrefabInstance:
     - target: {fileID: 1312763813215419211, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _gunFlash
+      value: 
+      objectReference: {fileID: 5628541496566216478, guid: e2f80adb3f60e7344993a2555e7b36a5, type: 3}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _hitEffect
+      value: 
+      objectReference: {fileID: 1608207823873857821, guid: 6bfd3424da21ab94e98d0e54300ec5ba, type: 3}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _particles
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738101701579387592, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738101701579387592, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9009299764090687428, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
       propertyPath: m_Name

@@ -1,24 +1,24 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
 
 namespace Script
 {
-    public class NavTarget : MonoBehaviour
+    public class AIController : MonoBehaviour
     {
-        [SerializeField] private Animator _animator;
+       
         
-        private Transform _target;
+        private Animator _animator;
         private NavMeshAgent _agent;
 
-        private void Awake()
+        private void Start()
         {
+            _animator = GetComponent<Animator>();
             _agent = GetComponent<NavMeshAgent>();
-            _target = GameObject.FindGameObjectWithTag("Player").transform;
         }
 
         private void Update()
         {
-            _agent.SetDestination(_target.transform.position);
             _animator.SetFloat("Speed", _agent.velocity.normalized.magnitude);
         }
         private void OnCollisionEnter(Collision other)

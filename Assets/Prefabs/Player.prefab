@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &587608169045795051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8168321281529994151}
+  m_Layer: 0
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8168321281529994151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587608169045795051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.242, z: 0.426}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1312763813215419211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9009299764090687428
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,8 +44,8 @@ GameObject:
   - component: {fileID: 1557744149684564630}
   - component: {fileID: 4950740517398144591}
   - component: {fileID: 6781417489567418001}
-  - component: {fileID: 1954306076002389559}
   - component: {fileID: 3447968950717235994}
+  - component: {fileID: 1954306076002389559}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -36,6 +67,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 280879443456223377}
+  - {fileID: 8168321281529994151}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6792512894374834846
@@ -144,23 +176,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1954306076002389559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9009299764090687428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6bc073371b93334eb603225307c676d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Script.PlayerController
-  _animator: {fileID: 6126529956426494699}
-  _moveSpeed: 2
-  _rotationSpeed: 10
-  _move: {x: 0, y: 0}
-  _look: {x: 0, y: 0}
 --- !u!114 &3447968950717235994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +206,29 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1954306076002389559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009299764090687428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6bc073371b93334eb603225307c676d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Script.PlayerController
+  _animator: {fileID: 6126529956426494699}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 192
+  _particles: {fileID: 0}
+  _move: {x: 0, y: 0}
+  _look: {x: 0, y: 0}
+  _gunOut: {fileID: 8168321281529994151}
+  _moveSpeed: 2
+  _rotationSpeed: 10
+  _gunRange: 20
 --- !u!1001 &319574295411396474
 PrefabInstance:
   m_ObjectHideFlags: 0

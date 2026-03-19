@@ -1,23 +1,27 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 namespace Script
 {
     public class PlayerController : MonoBehaviour
     {
+        [Header("References")] 
+        [SerializeField] private GameObject _gunFlash;
+        [SerializeField] private GameObject _hitEffect;
+        
         [Header("Settings")]
-        [SerializeField] private Animator _animator;
-        [SerializeField] private float _moveSpeed;
-        [SerializeField] private float _rotationSpeed;
+        [SerializeField] private LayerMask _layerMask;
         [SerializeField] private Vector2 _move;
         [SerializeField] private Vector2 _look;
-       
-       
+        [SerializeField] private Transform _gunOut;
+        [SerializeField] private float _moveSpeed;
+        [SerializeField] private float _rotationSpeed;
+        [SerializeField] private float _gunRange = 20;
+        
+        private Animator _animator;
         private PlayerInput _pI;
         private Rigidbody _rb;
-
+        
         private void Awake()
         {
             _animator = GetComponentInChildren<Animator>();
@@ -44,12 +48,11 @@ namespace Script
             
             // Animation
             Vector3 moveDirection = transform.InverseTransformDirection(move);
-            Debug.Log("original: " + move + " directional: " + moveDirection);
             
             _animator.SetFloat("X", moveDirection.x);
             _animator.SetFloat("Z", moveDirection.z);
         }
-
+        
         public void OnMove(InputValue value)
         {
             _move = value.Get<Vector2>();
@@ -59,5 +62,30 @@ namespace Script
         {
             _look = value.Get<Vector2>();
         }
+        
+        public void OnAttack(InputValue value)
+        {
+            if (value.isPressed)
+            {
+                RaycastHit hit;
+                Instantiate(_gunFlash, _gunOut.position, _gunOut.rotation);
+                if (Physics.Raycast(_gunOut.position, _gunOut.forward, out hit, _gunRange,_layerMask))
+                {
+                    Instantiate(_hitEffect, hit.transform.position, hit.transform.rotation);
+                    Destroy(hit.transform.gameObject);
+                }
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(_gunOut.position, _gunOut.forward * _gunRange);
+        }
     }
 }
+
+
+
+
+
