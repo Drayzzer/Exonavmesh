@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3447968950717235994}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,10 +113,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.2
   m_Height: 1.7
   m_Direction: 1
-  m_Center: {x: 0, y: -0.2, z: 0}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!54 &6781417489567418001
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.PlayerController
   _animator: {fileID: 6126529956426494699}
-  _moveSpeed: 10
+  _moveSpeed: 2
   _rotationSpeed: 10
   _move: {x: 0, y: 0}
   _look: {x: 0, y: 0}
@@ -205,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc290c1829fcd35498d00ac6ea539ce9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc290c1829fcd35498d00ac6ea539ce9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cf08f2834da90f84084f4ef80f690847, type: 2}
+    - target: {fileID: 5866666021909216657, guid: dc290c1829fcd35498d00ac6ea539ce9, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

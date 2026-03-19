@@ -8,7 +8,7 @@ namespace Script
     public class PlayerController : MonoBehaviour
     {
         [Header("Settings")]
-        [SerializeField]private Animator _animator;
+        [SerializeField] private Animator _animator;
         [SerializeField] private float _moveSpeed;
         [SerializeField] private float _rotationSpeed;
         [SerializeField] private Vector2 _move;
@@ -30,8 +30,10 @@ namespace Script
             Vector3 move = new Vector3(_move.x, 0 , _move.y);
             Vector3 look = new Vector3(_look.x, 0 , _look.y);   
             
+            // Movement
             transform.Translate(new Vector3(_move.x, 0, _move.y) * (_moveSpeed * Time.deltaTime), Space.World);
-
+            
+            // Rotation
             Vector3 dir = _look.magnitude > 0.1f ? look : move;
 
             if (dir.sqrMagnitude > 0.1f)
@@ -39,8 +41,13 @@ namespace Script
                 Quaternion targetRotation = Quaternion.LookRotation(dir);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * _rotationSpeed);
             }
-            _animator.SetFloat("X", move.x);
-            _animator.SetFloat("Z", move.z);
+            
+            // Animation
+            Vector3 moveDirection = transform.InverseTransformDirection(move);
+            Debug.Log("original: " + move + " directional: " + moveDirection);
+            
+            _animator.SetFloat("X", moveDirection.x);
+            _animator.SetFloat("Z", moveDirection.z);
         }
 
         public void OnMove(InputValue value)
