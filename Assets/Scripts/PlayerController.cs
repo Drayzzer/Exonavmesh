@@ -18,13 +18,13 @@ namespace Script
         [SerializeField] private float _rotationSpeed;
         [SerializeField] private float _gunRange = 20;
         
-        private Animator _animator;
+        [SerializeField]private Animator _animator;
         private PlayerInput _pI;
         private Rigidbody _rb;
         
         private void Awake()
         {
-            _animator = GetComponentInChildren<Animator>();
+            //_animator = GetComponentInChildren<Animator>();
             _rb = GetComponent<Rigidbody>();
             _pI = GetComponent<PlayerInput>();
         }
