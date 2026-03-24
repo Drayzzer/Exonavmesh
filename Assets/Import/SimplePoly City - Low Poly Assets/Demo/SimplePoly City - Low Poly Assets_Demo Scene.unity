@@ -16089,11 +16089,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: fbb8756519c039b4f804c77c5e3293f9, type: 3}
---- !u!4 &631001026 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5379514925842205074, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
-  m_PrefabInstance: {fileID: 8715416029470792396}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &631910590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40860,7 +40855,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dc290c1829fcd35498d00ac6ea539ce9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.996
+      value: 66.797
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dc290c1829fcd35498d00ac6ea539ce9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -57319,84 +57314,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1af0a2c8773f85c40bdb120f32cd8a8a, type: 3}
   m_PrefabInstance: {fileID: 2144424897}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6727067095668395416
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2241067004254512295, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3588052336962601414, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3946368025276194622, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftArm'\n\tTransform
-        'mixamorig:RightHand'\n\tTransform 'mixamorig:LeftForeArm'\n\tTransform 'mixamorig:RightForeArm'\n\tTransform
-        'mixamorig:LeftHand'\n\tTransform 'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftArm'\n\tTransform
-        'mixamorig:RightHand'\n\tTransform 'mixamorig:LeftForeArm'\n\tand more ..."
-      objectReference: {fileID: 0}
-    - target: {fileID: 6505584193407968800, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_Name
-      value: Player 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6505584193407968800, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7801388314757044333, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3bd715b27adcf48479cf1b40bff16901, type: 3}
 --- !u!1001 &8715416029470792396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57449,10 +57366,10 @@ PrefabInstance:
       propertyPath: m_Weight
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5959625068581543315, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
-      propertyPath: m_Data.m_Target
-      value: 
-      objectReference: {fileID: 631001026}
+    - target: {fileID: 2665678684336225387, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9009299764090687428, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -57472,7 +57389,6 @@ SceneRoots:
   - {fileID: 1849367384}
   - {fileID: 1554599265}
   - {fileID: 2120728866}
-  - {fileID: 8715416029470792396}
   - {fileID: 152471692}
-  - {fileID: 6727067095668395416}
+  - {fileID: 8715416029470792396}
   - {fileID: 1591003611}
