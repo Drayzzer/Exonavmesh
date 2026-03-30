@@ -1612,6 +1612,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b8ee657c6800ab849bb30b4375d02323, type: 3}
   m_PrefabInstance: {fileID: 59090476}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &59297496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59297498}
+  - component: {fileID: 59297499}
+  m_Layer: 0
+  m_Name: FmodTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &59297498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59297496}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 68.58524, y: 0.71374, z: 150}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &59297499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59297496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2090341843
+      Data2: 1215634595
+      Data3: -864969815
+      Data4: -543180155
+    Path: event:/AutoGun_far_02
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &62500441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5372056943023685468, guid: dc290c1829fcd35498d00ac6ea539ce9, type: 3}
@@ -2502,6 +2565,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: dac1a631b172e66469fb09e9987bcf57, type: 3}
   m_PrefabInstance: {fileID: 94469451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &98024997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9009299764090687428, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+  m_PrefabInstance: {fileID: 8715416029470792396}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &98095417
 PrefabInstance:
@@ -40483,6 +40551,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1312763813215419211, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
   m_PrefabInstance: {fileID: 8715416029470792396}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1576719725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98024997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1165265823
+      Data2: 1126862606
+      Data3: -1000014448
+      Data4: -2077390891
+    Path: event:/Footstep_Shoe_On_Street_03
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1576831075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44228,9 +44327,9 @@ GameObject:
   - component: {fileID: 1704015174}
   - component: {fileID: 1704015173}
   - component: {fileID: 1704015171}
-  - component: {fileID: 1704015170}
   - component: {fileID: 1704015175}
   - component: {fileID: 1704015176}
+  - component: {fileID: 1704015177}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -44238,14 +44337,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1704015170
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704015169}
-  m_Enabled: 1
 --- !u!124 &1704015171
 Behaviour:
   m_ObjectHideFlags: 0
@@ -44396,6 +44487,20 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &1704015177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704015169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 98024997}
 --- !u!1001 &1704196083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57362,6 +57467,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _er.Path
+      value: event:/AutoGun_far_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _er.Guid.Data1
+      value: 2090341843
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _er.Guid.Data2
+      value: 1215634595
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _er.Guid.Data3
+      value: -864969815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _er.Guid.Data4
+      value: -543180155
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _eventReference.Path
+      value: event:/Footstep_Shoe_On_Street_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _eventReference.Guid.Data1
+      value: 1165265823
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _eventReference.Guid.Data2
+      value: 1126862606
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _eventReference.Guid.Data3
+      value: -1000014448
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954306076002389559, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      propertyPath: _eventReference.Guid.Data4
+      value: -2077390891
+      objectReference: {fileID: 0}
     - target: {fileID: 2665678684336225387, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
       propertyPath: m_Weight
       value: 0
@@ -57377,7 +57522,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9009299764090687428, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1576719725}
   m_SourcePrefab: {fileID: 100100000, guid: 86a937907699ff04a81fb20ba5bd57a4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -57392,3 +57540,4 @@ SceneRoots:
   - {fileID: 152471692}
   - {fileID: 8715416029470792396}
   - {fileID: 1591003611}
+  - {fileID: 59297498}

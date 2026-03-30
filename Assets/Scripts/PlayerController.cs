@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,14 +18,15 @@ namespace Script
         [SerializeField] private float _moveSpeed;
         [SerializeField] private float _rotationSpeed;
         [SerializeField] private float _gunRange = 20;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private EventReference _er;
+        [SerializeField] private EventReference _eventReference;
         
-        [SerializeField]private Animator _animator;
         private PlayerInput _pI;
         private Rigidbody _rb;
         
         private void Awake()
         {
-            //_animator = GetComponentInChildren<Animator>();
             _rb = GetComponent<Rigidbody>();
             _pI = GetComponent<PlayerInput>();
         }
@@ -55,6 +57,7 @@ namespace Script
         
         public void OnMove(InputValue value)
         {
+            FmodTest.Instance.Play(_eventReference,true, gameObject);
             _move = value.Get<Vector2>();
         }
 
@@ -65,6 +68,7 @@ namespace Script
         
         public void OnAttack(InputValue value)
         {
+            FmodTest.Instance.Play(_er,false, null);
             if (value.isPressed)
             {
                 RaycastHit hit;
